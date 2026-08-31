@@ -1,0 +1,66 @@
+# "-ing" words STE permits, because they are technical nouns or modifiers
+# inside a technical noun phrase. The checker loads this file if it exists and
+# falls back to a built-in default if it does not.
+#
+# An advisory R5 finding on a word that belongs here is a gap in THIS file,
+# not a defect in the document. Add it and re-run.
+
+# general English that merely ends in -ing
+during
+string
+thing
+nothing
+something
+anything
+everything
+ring
+spring
+bring
+king
+wing
+sing
+morning
+evening
+ceiling
+
+# mechanical and aerospace nouns
+building
+warning
+engineering
+training
+meeting
+setting
+settings
+heading
+landing
+bearing
+casing
+housing
+coating
+wiring
+tubing
+packing
+bushing
+fitting
+mounting
+opening
+reading
+readings
+grounding
+bonding
+sealing
+locking
+timing
+
+# software and infrastructure nouns that appear in real technical documents
+logging
+monitoring
+caching
+routing
+mapping
+tracking
+staging
+polling
+batching
+indexing
+onboarding

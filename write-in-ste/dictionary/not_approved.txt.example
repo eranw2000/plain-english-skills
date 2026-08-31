@@ -1,0 +1,20 @@
+# FORMAT EXAMPLE ONLY. Not loaded.
+#
+# The checker reads `not_approved.txt` in this directory, not this file.
+# Rename it only once you hold the real Issue 9 list and have read its reuse
+# terms. A partial list passing R8 reads as compliance and is not.
+#
+# One entry per line. `bad = substitute`, or a bare word for no suggestion.
+
+ensure = make sure
+verify = make sure
+confirm = make sure
+check = make sure
+utilize = use
+commence = start
+terminate = stop
+prior to = before
+subsequent to = after
+in order to = to
+approximately = about
+sufficient = enough

@@ -1,0 +1,101 @@
+# Plain English word list
+#
+# NOT ASD-STE100. This list is assembled locally and makes no
+# claim to that standard. A document passing against this file
+# is plainer, not certified.
+#
+# Sources, both free of any copyright bar:
+#   plainlanguage.gov (GSA), US federal work, CC0 1.0
+#   a list of words that mark machine-written prose
+#
+# 84 entries: 60 proven in a corpus of real technical
+# documents, 24 carried from writing rules already in force.
+# See dictionary/README.md for how to rebuild it for your own
+# writing. The trailing counts are corpus frequencies.
+#
+# name: Plain English (local), 84 entries, NOT ASD-STE100
+
+currently = remove it  # seen in 65 docs
+additional = more  # seen in 33 docs
+previously = before  # seen in 30 docs
+therefore = so  # seen in 29 docs
+provide = give  # seen in 22 docs
+ensure = make sure  # seen in 20 docs
+sufficient = enough  # seen in 18 docs
+methodology = method  # seen in 17 docs
+modify = change  # seen in 14 docs
+accurate = correct  # seen in 13 docs
+additionally = also  # existing rule
+however = but  # seen in 11 docs
+demonstrate = show  # seen in 10 docs
+accordingly = so  # seen in 8 docs
+determine = decide  # seen in 8 docs
+magnitude = size  # seen in 7 docs
+subsequent = later  # seen in 7 docs
+and/or = or  # seen in 6 docs
+frequently = often  # seen in 6 docs
+substantial = large  # seen in 6 docs
+represents = is  # seen in 5 docs
+serves as = is  # existing rule
+remainder = rest  # seen in 4 docs
+timely = prompt  # seen in 4 docs
+a number of = some  # seen in 3 docs
+adjacent to = next to  # seen in 3 docs
+advise = recommend  # seen in 3 docs
+approximate = about  # seen in 3 docs
+eliminate = remove  # seen in 3 docs
+encounter = hit  # seen in 3 docs
+finalize = complete  # seen in 3 docs
+indicate = show  # seen in 3 docs
+notify = let know  # seen in 3 docs
+permit = let  # seen in 3 docs
+purchase = buy  # seen in 3 docs
+retain = keep  # seen in 3 docs
+utilization = use  # seen in 3 docs
+whereas = but  # seen in 3 docs
+allocate = divide  # seen in 2 docs
+assist = help  # seen in 2 docs
+consolidate = combine  # seen in 2 docs
+enhance = improve  # existing rule
+facilitate = help  # seen in 2 docs
+in order to = to  # seen in 2 docs
+indication = sign  # seen in 2 docs
+portion = part  # seen in 2 docs
+prioritize = rank  # seen in 2 docs
+regarding = about  # seen in 2 docs
+viable = practical  # seen in 2 docs
+anticipate = expect  # seen in 1 docs
+apparent = clear  # seen in 1 docs
+assistance = help  # seen in 1 docs
+designate = appoint  # seen in 1 docs
+during the period = during  # seen in 1 docs
+enhancing = improving  # existing rule
+establish = set up  # seen in 1 docs
+expiration = end  # seen in 1 docs
+feasible = possible  # seen in 1 docs
+forfeit = give up  # seen in 1 docs
+in lieu of = instead  # seen in 1 docs
+it is essential = must  # seen in 1 docs
+procure = buy  # seen in 1 docs
+showcase = show  # existing rule
+terminate = end  # seen in 1 docs
+transmit = send  # seen in 1 docs
+boasts = has  # existing rule
+bolstered = supported  # existing rule
+crucial = important  # existing rule
+delve = look at  # existing rule
+diverse array = range  # existing rule
+enduring = lasting  # existing rule
+foster = encourage  # existing rule
+garner = get  # existing rule
+groundbreaking = new  # existing rule
+interplay = interaction  # existing rule
+intricate = complex  # existing rule
+meticulous = careful  # existing rule
+nestled = set  # existing rule
+pivotal = important  # existing rule
+renowned = well known  # existing rule
+stands as = is  # existing rule
+testament = proof  # existing rule
+valuable insights = findings  # existing rule
+vibrant = lively  # existing rule
