@@ -77,7 +77,7 @@ The ranking above picks slot 1. The remaining slots are NOT the next items down 
 
 Name the axis in the option's own line, in plain words rather than these labels: "the twenty-minute one", "if you would rather not touch production today".
 
-**A gating decision takes slot 1 and no other slot.** He asked for a choice of work, and two questions is not that. One real exception: if two separate decisions each gate ready work, say so and let them take two slots.
+**A gating decision takes slot 1 and no other slot.** They asked for a choice of work, and two questions is not that. One real exception: if two separate decisions each gate ready work, say so and let them take two slots.
 
 **If fewer than the requested number genuinely qualify, return fewer and say so in one clause.** Never pad to reach the number. An invented second option is worse than a short answer, because the user will spend real time weighing something you already know is filler.
 
@@ -165,7 +165,7 @@ report:
 - **No "what this could not see" paragraph.** Compress it to a clause on the
   runner-up line, and only when it would actually change the answer. The full
   version reads as hedging and pushes the answer off the screen.
-- **No restating the gather.** He does not need to know the branch was clean or
+- **No restating the gather.** They do not need to know the branch was clean or
   that a pin was verified unless it changed the answer.
 - **No headings, no bold section labels.** At this length they are noise, and
   they are what makes a short answer look like a report.
