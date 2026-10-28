@@ -17,8 +17,8 @@ keyboard or high contrast.
 - **`/document-accessibility`** makes, checks or fixes a Word, PowerPoint, Excel
   or PDF file so a screen reader, a keyboard or high contrast can use it, aligned
   with Israeli Standard SI 5568 Part 2 and the WCAG AA rules for documents. A
-  checker reads the .docx or .pptx XML, then the skill walks the checks a script
-  cannot make.
+  checker reads the .docx or .pptx XML, then the skill walks the manual checks:
+  reading order, contrast and the exported PDF.
 
 ![Flow](docs/plain-english-flow.png)
 
@@ -98,7 +98,7 @@ prints `FAIL` lines (barriers: no title, no document language, Hebrew text with
 no Hebrew language, no real headings, a skipped heading level, missing alt text,
 a file name as alt text, a table with no header row, "click here" links, a slide
 with no title) and `WARN` lines that a person must look at. It ends with the list
-of checks a script cannot make, such as reading order, contrast and the exported
+of checks a person makes, such as reading order, contrast and the exported
 PDF. Exit 0 means no FAIL, 1 at least one FAIL, 2 the file could not be read.
 
 A clean run covers what a script can read, so the skill reports PASS only after

@@ -17,8 +17,8 @@ Each line the checker prints starts with FAIL or WARN and a rule name.
 - **headings-none** (FAIL): 15 or more paragraphs and not one real heading style.
 - **heading-skip** (FAIL): a level jumps (Heading 1 then Heading 3).
 - **fake-heading** (WARN): a short paragraph that is all bold or 14 pt and up, with no
-  heading style. Usually a heading in disguise; make it one. Bold text inside a table
-  cell is not reported.
+  heading style. Usually a heading in disguise; make it one. The check skips table
+  cells, where bold is normal.
 - **alt-text** (FAIL): an image, chart or diagram with no alt text that is not marked
   decorative. Word: `wp:docPr descr`; PowerPoint: `p:cNvPr descr`.
 - **alt-text-filename** (FAIL): the alt text is a file name (`chart.png`). python-pptx
@@ -46,7 +46,7 @@ A decorative image is marked with `adec:decorative val="1"` inside the image's
   distribution and accessibility", which Microsoft says "sends the document over to a
   secure Microsoft service over the internet for conversion": for a client's confidential
   file, ask before using it. Print to PDF does not keep the tags. (Microsoft Support,
-  "Create accessible PDFs", read 2026-10-25.)
+  "Create accessible PDFs".)
 
 ## PowerPoint
 
@@ -67,8 +67,8 @@ A decorative image is marked with `adec:decorative val="1"` inside the image's
 
 ## PDF
 
-There is no PDF checker here yet. Until one is chosen from its own documentation, check
-by hand in the viewer: tagged, Title shown in the window bar, language set, headings and
+Check a PDF by hand in the viewer: tagged, Title shown in the window bar,
+language set, headings and
 tables tagged, links work, alt text survived, text selectable, reading order sane. A PDF
 printed from HTML: confirm it is tagged before calling it accessible, never assume it.
 

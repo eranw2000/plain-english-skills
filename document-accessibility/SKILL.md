@@ -1,6 +1,6 @@
 ---
 name: document-accessibility
-description: "Make, check or fix a Word, PowerPoint, Excel or PDF document so people who use a screen reader, a keyboard or high contrast can use it, aligned with Israeli Standard SI 5568 Part 2 (ת״י 5568 חלק 2) and the WCAG AA rules that apply to documents. Runs a checker over the .docx or .pptx XML (title, language, Hebrew language, real headings, alt text, table header rows, link text, slide titles) that exits non-zero on a barrier, then walks the checks a script cannot do. Use when the user says 'make this document accessible', 'check accessibility', 'נגישות', 'is this deck accessible', 'SI 5568', 'תקן 5568', 'accessible PDF', 'alt text', or before a document goes to a public body or a client that must comply. Not legal advice, and not for web pages."
+description: "Make, check or fix a Word, PowerPoint, Excel or PDF document so people who use a screen reader, a keyboard or high contrast can use it, aligned with Israeli Standard SI 5568 Part 2 (ת״י 5568 חלק 2) and the WCAG AA rules that apply to documents. Runs a checker over the .docx or .pptx XML (title, language, Hebrew language, real headings, alt text, table header rows, link text, slide titles) that exits non-zero on a barrier, then walks the manual checks (reading order, contrast, the exported PDF). Use when the user says 'make this document accessible', 'check accessibility', 'נגישות', 'is this deck accessible', 'SI 5568', 'תקן 5568', 'accessible PDF', 'alt text', or before a document goes to a public body or a client that must comply. Not legal advice, and not for web pages."
 model: opus
 ---
 
@@ -16,7 +16,7 @@ that apply to a document. Before you state which edition, date or legal duty app
 read the Standards Institution of Israel page and the current regulation in the same
 turn: an edition or an exemption written from memory is a claim, and the reader will act
 on it. Technical conformance and legal compliance are two different answers; this skill
-gives the first one only.
+covers technical conformance.
 
 ## 1. Know what you are holding
 
@@ -31,16 +31,14 @@ python3 -I ~/.claude/skills/document-accessibility/scripts/check_doc_a11y.py "<f
 ```
 
 It reads the XML directly (no Word needed), prints `FAIL` lines (barriers) and `WARN`
-lines (a person must look), and ends with the list of what it did NOT check. Exit 0
+lines (a person must look), and ends with the list of checks a person makes. Exit 0
 means no FAIL, 1 means at least one FAIL, 2 means it could not read the file. Pass
 `--lang he-IL` when the document must declare Hebrew. Rules and how to fix each one:
 read `~/.claude/skills/document-accessibility/reference/formats.md`.
 
 A clean run is NOT a pass. It covers what a script can read; step 4 covers the rest.
 
-Excel and PDF have no checker here yet. Do them by hand from `reference/formats.md`.
-A PDF checker gets added only after its own documentation is read and a control file
-is shown to fail it.
+For Excel and PDF, work by hand from `reference/formats.md`.
 
 ## 3. Build or fix in this order
 
@@ -57,7 +55,7 @@ Structure before looks, and never trade structure for looks:
 6. Reading order, then colour and contrast, then the exported PDF on its own.
 
 When you generate the file with python-docx or python-pptx, set these in the builder,
-not afterwards by hand. Two traps measured here: python-pptx writes the image's FILE
+not afterwards by hand. Two traps to avoid: python-pptx writes the image's FILE
 NAME as its alt text when none is given, and a deck built from blank layouts with text
 boxes has no slide titles at all.
 For a Hebrew file, set right-to-left direction on every paragraph and table, and look at
