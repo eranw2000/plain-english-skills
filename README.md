@@ -1,7 +1,9 @@
 # Plain English skills for Claude Code
 
-Three artifacts that make Claude write for a reader instead of for the session
-it has been sitting in. They split one job three ways.
+Four artifacts that make Claude write for a reader instead of for the session
+it has been sitting in. Three of them split one job three ways; the fourth makes
+a finished document usable by people who read it with a screen reader, a
+keyboard or high contrast.
 
 - **`/explain-simply`** re-says the last report in plain English for someone who
   was not reading along. It only translates: no new work, no re-checking, and it
@@ -12,6 +14,11 @@ it has been sitting in. They split one job three ways.
 - **`/write-in-ste`** rewrites a document you name into Simplified Technical
   English and runs a checker on it. For install guides and handover documents,
   not for chat.
+- **`/document-accessibility`** makes, checks or fixes a Word, PowerPoint, Excel
+  or PDF file so a screen reader, a keyboard or high contrast can use it, aligned
+  with Israeli Standard SI 5568 Part 2 and the WCAG AA rules for documents. A
+  checker reads the .docx or .pptx XML, then the skill walks the checks a script
+  cannot make.
 
 ![Flow](docs/plain-english-flow.png)
 
@@ -33,10 +40,11 @@ stilted.
 
 ```bash
 mkdir -p ~/.claude/skills
-cp -r explain-simply write-in-ste ~/.claude/skills/
+cp -r explain-simply write-in-ste document-accessibility ~/.claude/skills/
 ```
 
-They are available immediately as `/explain-simply` and `/write-in-ste`, and
+They are available immediately as `/explain-simply`, `/write-in-ste` and
+`/document-accessibility`, and
 Claude also triggers them on their own descriptions.
 
 ### Command
@@ -79,6 +87,28 @@ belongs in `ste_check.py` or `dictionary/ing_allow.txt`, not in your document.
 The checker excludes fenced blocks, inline code spans, headings, tables, link
 targets and YAML frontmatter, so it never rewrites a command or an identifier.
 
+## The accessibility checker
+
+```bash
+python3 ~/.claude/skills/document-accessibility/scripts/check_doc_a11y.py report.docx --lang he-IL
+```
+
+It reads the file's XML directly, with only the Python standard library, and
+prints `FAIL` lines (barriers: no title, no document language, Hebrew text with
+no Hebrew language, no real headings, a skipped heading level, missing alt text,
+a file name as alt text, a table with no header row, "click here" links, a slide
+with no title) and `WARN` lines that a person must look at. It ends with the list
+of checks a script cannot make, such as reading order, contrast and the exported
+PDF. Exit 0 means no FAIL, 1 at least one FAIL, 2 the file could not be read.
+
+A clean run covers what a script can read, so the skill reports PASS only after
+the manual checks are made too. Its tests build their sample files with
+`python-docx` and `python-pptx`:
+
+```bash
+cd ~/.claude/skills/document-accessibility/scripts && python3 -m unittest test_check_doc_a11y
+```
+
 ## The word list, and what a clean run may claim
 
 Read `write-in-ste/dictionary/README.md` before you report anything as compliant.
@@ -118,7 +148,7 @@ you say yes.
 
 ## Model routing
 
-The two skills are pinned `model: opus`, because rewriting prose for a reader is
+The three skills are pinned `model: opus`, because rewriting prose for a reader is
 quality-sensitive work. `/next-step` uses `model: inherit`, so it runs on whatever
 model your session is on.
 
