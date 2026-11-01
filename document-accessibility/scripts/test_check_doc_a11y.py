@@ -12,6 +12,12 @@ rule fails. CONTROL builds one file with every defect, and it must fail.
 from __future__ import annotations
 
 import io
+import sys
+# Read and write UTF-8 on every OS: the Windows default code page misreads it.
+if __name__ == "__main__":
+    for _stream in (sys.stdin, sys.stdout, sys.stderr):
+        if hasattr(_stream, "reconfigure"):
+            _stream.reconfigure(encoding="utf-8", errors="replace")
 import os
 import struct
 import subprocess
@@ -171,7 +177,7 @@ def build_pptx(path: Path, breaks: set[str] = frozenset(), hebrew: bool = False)
 
 
 def run_checker(path: Path, *args: str) -> tuple[int, str]:
-    out = subprocess.run([SYSTEM_PY, "-I", str(CHECKER), str(path), *args], capture_output=True, text=True)
+    out = subprocess.run([SYSTEM_PY, "-I", str(CHECKER), str(path), *args], capture_output=True, text=True, encoding="utf-8", errors="replace")
     return out.returncode, out.stdout + out.stderr
 
 
@@ -481,7 +487,7 @@ class ControlAndErrors(Base):
 
     def test_not_a_zip_cannot_be_read(self):
         p = self.dir / "x.docx"
-        p.write_text("not a document")
+        p.write_bytes(("not a document").encode("utf-8"))
         code, out = run_checker(p)
         self.assertEqual(code, 2, out)
         self.assertIn("CANNOT READ", out)

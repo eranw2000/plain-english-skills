@@ -27,6 +27,12 @@ Vendor facts this relies on (read 2026-10-25):
 from __future__ import annotations
 
 import argparse
+import sys
+# Read and write UTF-8 on every OS: the Windows default code page misreads it.
+if __name__ == "__main__":
+    for _stream in (sys.stdin, sys.stdout, sys.stderr):
+        if hasattr(_stream, "reconfigure"):
+            _stream.reconfigure(encoding="utf-8", errors="replace")
 import posixpath
 import re
 import sys
