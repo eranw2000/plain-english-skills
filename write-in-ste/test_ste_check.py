@@ -130,7 +130,7 @@ check("abbreviation does not split",
 
 # --- R8 dictionary: off by default, on when installed ---------------------
 tmp = tempfile.mkdtemp()
-with open(os.path.join(tmp, "not_approved.txt"), "w", encoding="utf-8") as fh:
+with open(os.path.join(tmp, "not_approved.txt"), "w", encoding="utf-8", newline="") as fh:
     fh.write("# seed\nensure = make sure\nutilize = use\n")
 check("R8 silent with no dictionary",
       "R8" in rules("Ensure the valve is open.", "procedural", tmp + "-missing"), False)
@@ -143,7 +143,7 @@ check("R8 silent on approved wording with a dictionary installed",
 # A loop over single words can never match "in order to". Ten entries of the
 # first real list were dead this way and the output looked perfectly clean.
 tmp2 = tempfile.mkdtemp()
-with open(os.path.join(tmp2, "not_approved.txt"), "w", encoding="utf-8") as fh:
+with open(os.path.join(tmp2, "not_approved.txt"), "w", encoding="utf-8", newline="") as fh:
     fh.write("# name: test list\nin order to = to\nensure = make sure\n"
              "a number of = some\nutilize = use\n")
 
@@ -187,7 +187,7 @@ check("R8 count is zero on clean text",
 # dictionary/README.md documents this format, and nothing exercised it. The
 # message must still name the word and must NOT trail an empty "use ''".
 tmp3 = tempfile.mkdtemp()
-with open(os.path.join(tmp3, "not_approved.txt"), "w", encoding="utf-8") as fh:
+with open(os.path.join(tmp3, "not_approved.txt"), "w", encoding="utf-8", newline="") as fh:
     fh.write("# name: bare list\ncommence\nensure = make sure\n")
 _bare = r8_msgs("Commence the procedure.", tmp3)
 check("R8 fires on a bare entry", len(_bare), 1)
@@ -210,10 +210,10 @@ check("an unnamed list still reports that it is loaded",
 # --- exit codes through the real CLI --------------------------------------
 def run_cli(text, *args):
     p = os.path.join(tempfile.mkdtemp(), "d.md")
-    with open(p, "w", encoding="utf-8") as fh:
+    with open(p, "w", encoding="utf-8", newline="") as fh:
         fh.write(text)
     r = subprocess.run([sys.executable, os.path.join(HERE, "ste_check.py"), p] + list(args),
-                       capture_output=True, text=True)
+                       capture_output=True, text=True, encoding="utf-8", errors="replace")
     return r.returncode
 
 
