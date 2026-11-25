@@ -1,20 +1,20 @@
 <mxfile host="app.diagrams.net">
   <diagram name="Plain English skills">
-    <mxGraphModel dx="3340" dy="1330" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3340" pageHeight="1330" math="0" shadow="0">
+    <mxGraphModel dx="4200" dy="1330" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="4200" pageHeight="1330" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="t" value="Plain English skills for Claude Code" style="text;html=1;align=left;verticalAlign=middle;fontSize=26;fontStyle=1;fontFamily=Helvetica;" vertex="1" parent="1">
           <mxGeometry x="40" y="26" width="1400" height="44" as="geometry" />
         </mxCell>
-        <mxCell id="lg" value="LEGEND&#10;&#10;Green ellipse   what starts it&#10;Blue box        the artifact that runs&#10;Orange doc      what you get back&#10;Yellow cylinder a file on disk&#10;Red diamond     a pass or fail check&#10;&#10;Dashed frame    one of the four jobs" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#999999;align=left;verticalAlign=top;spacingLeft=12;spacingTop=8;fontSize=12;fontFamily=Helvetica;" vertex="1" parent="1">
+        <mxCell id="lg" value="LEGEND&#10;&#10;Green ellipse   what starts it&#10;Blue box        the artifact that runs&#10;Orange doc      what you get back&#10;Yellow cylinder a file on disk&#10;Red diamond     a pass or fail check&#10;&#10;Dashed frame    one of the five jobs" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#999999;align=left;verticalAlign=top;spacingLeft=12;spacingTop=8;fontSize=12;fontFamily=Helvetica;" vertex="1" parent="1">
           <mxGeometry x="40" y="86" width="560" height="208" as="geometry" />
         </mxCell>
         <mxCell id="sp" value="THE SPLIT, AND WHY IT IS A SPLIT&#10;&#10;A recap that also recommends is two jobs in one message,&#10;and the recommendation crowds out the caveat. So the&#10;restating half may never recommend, and the recommending&#10;half may never dump the whole board.&#10;&#10;They share one thing: the vocabulary rule. It has a single&#10;owner, so the two cannot drift apart." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#999999;align=left;verticalAlign=top;spacingLeft=12;spacingTop=8;fontSize=12;fontFamily=Helvetica;" vertex="1" parent="1">
           <mxGeometry x="630" y="86" width="880" height="208" as="geometry" />
         </mxCell>
-        <mxCell id="in" value="INSTALL&#10;&#10;cp -r explain-simply write-in-ste document-accessibility ~/.claude/skills/&#10;cp commands/next-step.md ~/.claude/commands/&#10;&#10;Check the checker runs:&#10;python3 ~/.claude/skills/write-in-ste/ste_check.py --selftest&#10;&#10;Python 3 only. No third-party packages." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#999999;align=left;verticalAlign=top;spacingLeft=12;spacingTop=8;fontSize=12;fontFamily=Helvetica;" vertex="1" parent="1">
-          <mxGeometry x="1540" y="86" width="1760" height="208" as="geometry" />
+        <mxCell id="in" value="INSTALL&#10;&#10;cp -r explain-simply write-in-ste document-accessibility question-page ~/.claude/skills/&#10;cp commands/next-step.md ~/.claude/commands/&#10;&#10;Check the checker runs:&#10;python3 ~/.claude/skills/write-in-ste/ste_check.py --selftest&#10;&#10;Python 3 only. No third-party packages." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#999999;align=left;verticalAlign=top;spacingLeft=12;spacingTop=8;fontSize=12;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="1540" y="86" width="2620" height="208" as="geometry" />
         </mxCell>
         <mxCell id="A" value="A.  Restate what was just said" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;fillColor=none;strokeColor=#666666;verticalAlign=top;align=left;spacingLeft=12;spacingTop=6;fontStyle=1;fontSize=15;fontFamily=Helvetica;" vertex="1" parent="1">
           <mxGeometry x="40" y="330" width="740" height="560" as="geometry" />
@@ -71,7 +71,7 @@
           <mxGeometry x="1720" y="960" width="340" height="100" as="geometry" />
         </mxCell>
         <mxCell id="ft" value="WHAT A CLEAN RUN MAY CLAIM&#10;&#10;The ASD-STE100 approved-word dictionary is copyright ASD and is not in this repository. A local plain English list of 84 entries&#10;is installed instead, built from plainlanguage.gov (a US federal work, CC0 1.0). The checker prints which list it loaded on every&#10;run, so a local list and the official one can never look alike in the output.&#10;&#10;Honest wording: passes the structural rules, and word choice was checked against the local plain English list, so the document&#10;is plainer, not certified." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#999999;align=left;verticalAlign=top;spacingLeft=12;spacingTop=8;fontSize=12;fontFamily=Helvetica;" vertex="1" parent="1">
-          <mxGeometry x="40" y="1120" width="3260" height="170" as="geometry" />
+          <mxGeometry x="40" y="1120" width="4120" height="170" as="geometry" />
         </mxCell>
         <mxCell id="e1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;fontSize=12;fontFamily=Helvetica;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="a1" target="a2">
           <mxGeometry relative="1" as="geometry" />
@@ -163,7 +163,47 @@
         <mxCell id="d6" value="THE CHECKS A PERSON MAKES&#10;&#10;Reading order, meaningful alt text, contrast,&#10;colour never the only signal, images of text,&#10;and the exported PDF on its own." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#999999;align=left;verticalAlign=top;spacingLeft=12;spacingTop=8;fontSize=12;fontFamily=Helvetica;" vertex="1" parent="1">
           <mxGeometry x="2580" y="960" width="680" height="110" as="geometry" />
         </mxCell>
-      </root>
+      <mxCell id="E" value="E.  Ask you a question" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;fillColor=none;strokeColor=#666666;verticalAlign=top;align=left;spacingLeft=12;spacingTop=6;fontStyle=1;fontSize=15;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="3360" y="330" width="800" height="560" as="geometry" />
+        </mxCell>
+        <mxCell id="q1" value="Claude needs you to decide something" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontFamily=Helvetica;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="3440" y="392" width="340" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="q2" value="/question-page" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontFamily=Helvetica;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="3440" y="512" width="340" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="q3" value="Screenshot at 1280px, then look" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontFamily=Helvetica;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="3440" y="640" width="340" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="q4" value="looks right?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontFamily=Helvetica;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="3900" y="616" width="220" height="104" as="geometry" />
+        </mxCell>
+        <mxCell id="q5" value="Page opened, then a one-keystroke question" style="shape=document;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontFamily=Helvetica;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="3820" y="790" width="310" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="q6" value="NO PAGE FOR A SIMPLE QUESTION&#10;&#10;A go-ahead on what was just reported, a setting or a value,&#10;a step of another skill's fixed flow, a re-ask.&#10;The page would only repeat the option labels." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#999999;align=left;verticalAlign=top;spacingLeft=12;spacingTop=8;fontSize=12;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="3440" y="960" width="680" height="110" as="geometry" />
+        </mxCell>
+      <mxCell id="f1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;fontSize=12;fontFamily=Helvetica;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="q1" target="q2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f2" value="verify" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;fontSize=12;fontFamily=Helvetica;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="q2" target="q3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;fontSize=12;fontFamily=Helvetica;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="q3" target="q4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f4" value="yes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;fontSize=12;fontFamily=Helvetica;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="q4" target="q5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f5" value="no, fix and look again" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;fontSize=12;fontFamily=Helvetica;labelBackgroundColor=#ffffff;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="q4" target="q2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="4010" y="560" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        </root>
     </mxGraphModel>
   </diagram>
 </mxfile>
