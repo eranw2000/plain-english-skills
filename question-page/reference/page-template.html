@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{SHORT QUESTION}}</title>
+<style>
+:root{--bg:#f7f7f5;--card:#fff;--ink:#1d1d1f;--mute:#55555b;--line:#e2e2e0;--ok:#1f6b34;--okbg:#e6f4ea;--warn:#8a4b00;--warnbg:#fdf1e3;--band:#22313f;--pick:#0b5cad;--del:#a3201f;--ins:#1f6b34}
+@media (prefers-color-scheme:dark){:root{--bg:#141416;--card:#1e1e22;--ink:#ededf0;--mute:#a8a8b0;--line:#33333a;--ok:#86d9a0;--okbg:#1d3326;--warn:#f3c07a;--warnbg:#3a2b17;--band:#0e1620;--pick:#8fbcff;--del:#ff9c9a;--ins:#86d9a0}}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 -apple-system,Segoe UI,Arial,sans-serif}
+.band{background:var(--band);color:#fff;padding:14px 32px}.band b{font-size:17px}.band span{opacity:.85;margin-left:12px}
+main{max-width:980px;margin:0 auto;padding:28px 32px 48px}
+h1{font-size:26px;margin:0 0 6px}h2{font-size:20px;margin:28px 0 10px}
+p.lead{color:var(--mute);margin:0 0 20px}
+.box{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px;margin:12px 0}
+.wrong{background:var(--warnbg);color:var(--warn);border-radius:10px;padding:14px 16px}
+.chk{background:var(--okbg);color:var(--ok);border-radius:10px;padding:12px 16px;margin:18px 0}
+.quote{border-left:4px solid var(--line);padding:8px 14px;background:var(--card);white-space:pre-wrap}
+.rtl{direction:rtl;text-align:right;font-family:Arial,sans-serif}
+del{color:var(--del)}ins{color:var(--ins);text-decoration:none;font-weight:600}
+.label{font-size:13px;font-weight:600;color:var(--mute);text-transform:uppercase;letter-spacing:.04em}
+.opts{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.opt{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px}
+.opt.pick{border:2px solid var(--pick)}.tag{color:var(--pick);font-weight:700;font-size:13px}
+.opt h3{margin:4px 0 8px;font-size:17px}
+code{font-family:ui-monospace,Menlo,monospace;font-size:14px}
+</style></head><body>
+<div class="band"><b>Project: {{PROJECT NAME}}</b><span>{{WHAT THE PROJECT IS, A FEW WORDS}}</span><span>{{DATE}}, {{HH:MM}} {{ZONE}} ({{HH:MM}} UTC)</span></div>
+<main>
+<h1>{{THE QUESTION}}</h1>
+<p class="lead">{{ONE SENTENCE: WHY THIS IS ASKED NOW}}</p>
+
+<h2>What went wrong</h2>
+<div class="wrong">{{THE PROBLEM AS IT HAPPENS TO THE REAL DOCUMENT OR PERSON}}</div>
+
+<h2>The real text</h2>
+<div class="quote">{{QUOTED TEXT OR DATA}}</div>
+<div class="quote rtl" dir="rtl" lang="he">{{HEBREW TEXT, IF ANY}}</div>
+
+<h2>Before and after</h2>
+<div class="box"><div class="label">Now</div><p><del>{{OLD}}</del></p><div class="label">After option {{N}}</div><p><ins>{{NEW}}</ins></p></div>
+
+<h2>Steps</h2>
+<ol><li>{{STEP}}</li></ol>
+
+<div class="box"><div class="label">Invented example</div><p>{{EXAMPLE, MADE UP, SAID SO}}</p></div>
+
+<div class="chk"><b>Checked:</b> {{WHAT WAS RUN TO BACK THIS PAGE}}</div>
+
+<h2>Your choice</h2>
+<div class="opts">
+<div class="opt pick"><div class="tag">MY PICK</div><h3>Option 1: {{WHAT YOU DO}}</h3><p>{{WHAT CHANGES FOR THE PEOPLE WHO USE IT, WHAT THEY LOSE, WHY THIS IS THE PICK}}</p></div>
+<div class="opt"><h3>Option 2: {{WHAT YOU DO}}</h3><p>{{WHAT CHANGES, WHAT THEY LOSE}}</p></div>
+</div>
+</main></body></html>

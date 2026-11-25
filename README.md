@@ -1,9 +1,10 @@
 # Plain English skills for Claude Code
 
-Four artifacts that make Claude write for a reader instead of for the session
+Five artifacts that make Claude write for a reader instead of for the session
 it has been sitting in. Three of them split one job three ways; the fourth makes
 a finished document usable by people who read it with a screen reader, a
-keyboard or high contrast.
+keyboard or high contrast; the fifth puts a question to you on a page you can
+read before you answer.
 
 - **`/explain-simply`** re-says the last report in plain English for someone who
   was not reading along. It only translates: no new work, no re-checking, and it
@@ -19,6 +20,11 @@ keyboard or high contrast.
   with Israeli Standard SI 5568 Part 2 and the WCAG AA rules for documents. A
   checker reads the .docx or .pptx XML, then the skill walks the manual checks:
   reading order, contrast and the exported PDF.
+- **`/question-page`** builds a one-page HTML explainer for a question Claude
+  asks you: which project it is from, what went wrong, the real text quoted,
+  before and after, and the options as cards with the pick marked. Claude
+  screenshots the page and looks at it before it asks. Simple questions (a
+  go-ahead, a setting, a re-ask) get no page; the skill keeps that list.
 
 ![Flow](docs/plain-english-flow.png)
 
@@ -42,11 +48,11 @@ stilted.
 
 ```bash
 mkdir -p ~/.claude/skills
-cp -r explain-simply write-in-ste document-accessibility ~/.claude/skills/
+cp -r explain-simply write-in-ste document-accessibility question-page ~/.claude/skills/
 ```
 
-They are available immediately as `/explain-simply`, `/write-in-ste` and
-`/document-accessibility`, and
+They are available immediately as `/explain-simply`, `/write-in-ste`,
+`/document-accessibility` and `/question-page`, and
 Claude also triggers them on their own descriptions.
 
 ### Command
@@ -150,7 +156,7 @@ you say yes.
 
 ## Model routing
 
-The three skills are pinned `model: opus`, because rewriting prose for a reader is
+The four skills are pinned `model: opus`, because rewriting prose for a reader is
 quality-sensitive work. `/next-step` uses `model: inherit`, so it runs on whatever
 model your session is on.
 
